@@ -6,8 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    p=new threadaddlg(this);
-    p->show();
 }
 
 MainWindow::~MainWindow()
