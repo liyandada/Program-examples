@@ -17,17 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    testdemo.cpp
 
 HEADERS += \
     mainwindow.h \
-    pluginoneInterface.h
-
-DEFINES += PLUGIN_INSTALL_DIRS='\\"$${PLUGIN_INSTALL_DIRS}\\"'
+    testdemo.h
 
 # Default rules for deployment.
-target.path = /usr/bin/
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES += \
-    env/env.pri
