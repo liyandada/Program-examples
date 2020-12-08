@@ -33,10 +33,19 @@ ValueAdaptor::~ValueAdaptor()
     // destructor
 }
 
+int ValueAdaptor::maxValue()
+{
+    // handle method call com.scorpio.test.value.maxValue
+    int out0;
+    QMetaObject::invokeMethod(parent(), "maxValue", Q_RETURN_ARG(int, out0));
+    return out0;
+}
+
 int ValueAdaptor::minValue()
 {
     // handle method call com.scorpio.test.value.minValue
     int out0;
+    emit kkk(3,"qwe");
     QMetaObject::invokeMethod(parent(), "minValue", Q_RETURN_ARG(int, out0));
     return out0;
 }
@@ -45,6 +54,8 @@ int ValueAdaptor::value()
 {
     // handle method call com.scorpio.test.value.value
     int out0;
+    emit kkk(3,"qwe");
+    qDebug()<<"ok";
     QMetaObject::invokeMethod(parent(), "value", Q_RETURN_ARG(int, out0));
     return out0;
 }

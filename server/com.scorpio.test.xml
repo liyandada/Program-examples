@@ -1,6 +1,13 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="com.scorpio.test.value">
+    <signal name="kkk">
+      <arg type="i" direction="out"/>
+      <arg name="ret" type="s" direction="out"/>
+    </signal>
+    <method name="maxValue">
+      <arg type="i" direction="out"/>
+    </method>
     <method name="minValue">
       <arg type="i" direction="out"/>
     </method>

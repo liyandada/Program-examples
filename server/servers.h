@@ -9,17 +9,17 @@ class servers : public QObject
     //定义Interface名称为com.scorpio.test.value
     Q_CLASSINFO("D-Bus Interface", "com.scorpio.test.value")
 public:
-    servers(int value);
+    servers(QString value);
 
 public slots:
     int maxValue();
     int minValue();
-    int value();
+    QString value(QString arg);
 private:
-    int m_value;
+    QString m_value;
 
 Q_SIGNALS: // SIGNALS
-    int kkk();
+    QString kkk(QString ret);
 
 };
 

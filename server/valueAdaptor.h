@@ -15,6 +15,7 @@
 #include <QtCore/QObject>
 #include <QtDBus/QtDBus>
 #include "servers.h"
+#include <QDebug>
 QT_BEGIN_NAMESPACE
 class QByteArray;
 template<class T> class QList;
@@ -33,6 +34,13 @@ class ValueAdaptor: public QDBusAbstractAdaptor
     Q_CLASSINFO("D-Bus Interface", "com.scorpio.test.value")
     Q_CLASSINFO("D-Bus Introspection", ""
 "  <interface name=\"com.scorpio.test.value\">\n"
+"    <signal name=\"kkk\">\n"
+"      <arg direction=\"out\" type=\"i\"/>\n"
+"      <arg direction=\"out\" type=\"s\" name=\"ret\"/>\n"
+"    </signal>\n"
+"    <method name=\"maxValue\">\n"
+"      <arg direction=\"out\" type=\"i\"/>\n"
+"    </method>\n"
 "    <method name=\"minValue\">\n"
 "      <arg direction=\"out\" type=\"i\"/>\n"
 "    </method>\n"
@@ -47,10 +55,11 @@ public:
 
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
+    int maxValue();
     int minValue();
     int value();
 Q_SIGNALS: // SIGNALS
-    int kkk();
+    void kkk(int in0, const QString &ret);
 };
 
 #endif

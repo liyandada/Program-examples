@@ -10,5 +10,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+public Q_SLOTS:
+    QString getsignal(QString arg);
+
 };
 #endif // MAINWINDOW_H
