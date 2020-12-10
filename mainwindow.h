@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "networkdemo.h"
 
 class MainWindow : public QMainWindow
 {
@@ -10,5 +11,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    NetWorkAccessManager *NWAMaganer;
 };
 #endif // MAINWINDOW_H
