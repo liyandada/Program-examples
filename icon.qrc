@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>system-updatepig.png</file>
+        <file>system-update.png</file>
+    </qresource>
+</RCC>
